@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Important Notice: Practice Closure | ADHD Treatment Center of Florida</title>
+<meta name="description" content="Important notice regarding the closure of Dr. Jane Doe, MD's private practice — medical records, prescription continuity, and crisis resources.">
+<link rel="icon" href="https://adhdfl.com/wp-content/uploads/2025/04/cropped-adhd-favicon-32x32.png" sizes="32x32">
+
+<style>
+  :root{
+    --color-primary:#1B4E8C;
+    --color-secondary:#7E9E86;
+    --color-accent:#10B4D1;
+    --color-text:#566593;
+    --color-border:#D1DCE8;
+    --color-bg-light:#F2FAFF;
+    --color-bg-light2:#ECF5FB;
+    --color-white:#FFFFFF;
+    --color-crisis:#B3261E;
+    --color-crisis-bg:#FDECEA;
+    --font-heading:'Poppins','Segoe UI',system-ui,-apple-system,sans-serif;
+    --font-body:'Poppins','Segoe UI',system-ui,-apple-system,sans-serif;
+    --radius-card:30px;
+    --radius-btn:25px;
+    --max-width:1140px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+
+  body{
+    font-family:var(--font-body);
+    color:var(--color-text);
+    background:var(--color-white);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:var(--font-heading);
+    color:var(--color-primary);
+    margin:0;
+    line-height:1.3;
+  }
+
+  a{color:var(--color-primary);text-decoration:underline;}
+  a:hover{color:var(--color-secondary);}
+
+  .container{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* ===== HEADER ===== */
+  header.site-header{
+    background:var(--color-white);
+    border-bottom:1px solid var(--color-border);
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    padding:18px 0;
+  }
+
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .logo-text{
+    font-family:var(--font-heading);
+    font-weight:700;
+    font-size:22px;
+    color:var(--color-primary);
+    text-decoration:none;
+    letter-spacing:0.2px;
+  }
+
+  .logo-text span{color:var(--color-secondary);}
+
+  .header-tag{
+    font-size:14px;
+    color:var(--color-text);
+    font-weight:500;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  main{
+    display:block;
+  }
+
+  section{
+    padding:50px 0;
+  }
+
+  .section-inner{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  .card{
+    background:var(--color-white);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-card);
+    box-shadow:0 0 4px 0 rgba(0,0,0,.13);
+    padding:40px;
+  }
+
+  /* ===== NOTICE SECTION ===== */
+  .notice-section{
+    background:var(--color-bg-light);
+    padding-top:60px;
+    padding-bottom:60px;
+  }
+
+  .notice-card{
+    background:var(--color-white);
+    border:2px solid var(--color-primary);
+    border-radius:var(--radius-card);
+    box-shadow:0 0 10px 0 rgba(27,78,140,.15);
+    padding:40px;
+    text-align:center;
+  }
+
+  .notice-card h1{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:16px;
+  }
+
+  .notice-card p{
+    font-size:18px;
+    color:var(--color-text);
+    max-width:720px;
+    margin:0 auto;
+  }
+
+  /* ===== GENERIC SECTION HEADINGS ===== */
+  .section-head{
+    margin-bottom:20px;
+  }
+
+  .section-head h2{
+    font-size:26px;
+    font-weight:700;
+  }
+
+  .sub-title{
+    display:inline-block;
+    color:var(--color-secondary);
+    font-weight:600;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-bottom:8px;
+  }
+
+  /* ===== CONTACT LIST ===== */
+  .contact-list{
+    list-style:none;
+    padding:0;
+    margin:20px 0 0;
+  }
+
+  .contact-list li{
+    margin-bottom:12px;
+    font-size:17px;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+
+  .contact-list .label{
+    font-weight:600;
+    color:var(--color-primary);
+    min-width:70px;
+  }
+
+  .note{
+    margin-top:18px;
+    font-size:15px;
+    color:var(--color-text);
+    background:var(--color-bg-light2);
+    border-radius:14px;
+    padding:14px 18px;
+  }
+
+  /* ===== CRISIS SECTION (deliberately contrasting) ===== */
+  .crisis-section{
+    padding:50px 0;
+  }
+
+  .crisis-card{
+    background:var(--color-crisis-bg);
+    border:2px solid var(--color-crisis);
+    border-radius:var(--radius-card);
+    padding:40px;
+    text-align:center;
+  }
+
+  .crisis-card h2{
+    color:var(--color-crisis);
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+
+  .crisis-card p{
+    font-size:17px;
+    color:#5A1A15;
+    max-width:720px;
+    margin:0 auto 10px;
+  }
+
+  .crisis-numbers{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+
+  .crisis-pill{
+    display:inline-block;
+    background:var(--color-crisis);
+    color:var(--color-white);
+    font-weight:600;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:var(--radius-btn);
+    font-size:16px;
+  }
+
+  .crisis-pill:hover{
+    background:#8f221c;
+    color:var(--color-white);
+  }
+
+  .crisis-secondary{
+    font-size:15px;
+    color:#5A1A15;
+    margin-top:16px;
+  }
+
+  /* ===== SUPPORTING SECTIONS GRID ===== */
+  .support-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  @media (min-width:768px){
+    .support-grid{
+      grid-template-columns:1fr 1fr;
+    }
+  }
+
+  .support-card{
+    background:var(--color-bg-light2);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-card);
+    padding:30px;
+  }
+
+  .support-card h3{
+    font-size:19px;
+    margin-bottom:10px;
+  }
+
+  .support-card p{
+    font-size:15.5px;
+    margin:0;
+  }
+
+  .support-card a{
+    font-weight:600;
+  }
+
+  /* ===== BUTTON (pill style, matches source) ===== */
+  .btn{
+    display:inline-block;
+    background:var(--color-secondary);
+    color:var(--color-white) !important;
+    font-family:var(--font-heading);
+    font-weight:500;
+    font-size:16px;
+    border-radius:var(--radius-btn);
+    padding:14px 32px;
+    text-decoration:none;
+    margin-top:10px;
+  }
+
+  .btn:hover{
+    background:#6c8a73;
+    color:var(--color-white) !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer.site-footer{
+    background:var(--color-primary);
+    color:var(--color-white);
+    padding:40px 0 24px;
+    text-align:center;
+  }
+
+  footer.site-footer .footer-logo{
+    font-family:var(--font-heading);
+    font-weight:700;
+    font-size:20px;
+    margin-bottom:12px;
+  }
+
+  footer.site-footer p{
+    font-size:14px;
+    color:#D7E3F2;
+    margin:6px 0;
+  }
+
+  footer.site-footer a{
+    color:#FFFFFF;
+    text-decoration:underline;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:600px){
+    .notice-card{padding:28px 20px;}
+    .notice-card h1{font-size:24px;}
+    .card{padding:26px;}
+    .crisis-card{padding:28px 20px;}
+    .crisis-card h2{font-size:22px;}
+    section{padding:36px 0;}
+    .section-head h2{font-size:22px;}
+  }
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo-text">ADHD Treatment Center <span>of Florida</span></a>
+    <div class="header-tag">Practice Closure Notice</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- MAIN NOTICE -->
+  <section class="notice-section">
+    <div class="section-inner">
+      <div class="notice-card">
+        <h1>IMPORTANT NOTICE: PRACTICE CLOSURE</h1>
+        <p>Effective October 16, Dr. Jane Doe, MD has officially closed private practice operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDICAL RECORDS -->
+  <section class="records-section">
+    <div class="section-inner">
+      <div class="card">
+        <div class="section-head">
+          <span class="sub-title">Patient Records</span>
+          <h2>Medical Records Requests</h2>
+        </div>
+        <p>In compliance with HIPAA and state medical board guidelines, your psychiatric medical records are securely preserved.</p>
+        <p><strong>To request record transfers or copies:</strong></p>
+        <ul class="contact-list">
+          <li><span class="label">Email:</span> <a href="mailto:admin@adhdfl.com">admin@adhdfl.com</a></li>
+          <li><span class="label">Phone:</span> <a href="tel:+15550192834">(555) 019-2834</a></li>
+        </ul>
+        <div class="note">Please allow 5–7 business days for processing records requests.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRISIS RESOURCES -->
+  <section class="crisis-section">
+    <div class="section-inner">
+      <div class="crisis-card">
+        <h2>In Crisis? Help Is Available 24/7</h2>
+        <p>If you are experiencing a mental health emergency, call or text <a href="tel:988" style="color:var(--color-crisis);font-weight:700;">988</a> (Suicide &amp; Crisis Lifeline) or go to the nearest emergency room.</p>
+        <div class="crisis-numbers">
+          <a class="crisis-pill" href="tel:988">Call or Text 988</a>
+          <a class="crisis-pill" href="sms:741741&body=HOME">Text HOME to 741741</a>
+          <a class="crisis-pill" href="tel:911">Call 911</a>
+        </div>
+        <p class="crisis-secondary">Crisis Text Line: Text <strong>HOME</strong> to <a href="sms:741741&body=HOME" style="color:#5A1A15;">741741</a>. For life-threatening emergencies, always call <strong>911</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORTING SECTIONS -->
+  <section class="support-section">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="sub-title">What To Do Next</span>
+        <h2>Transition Information</h2>
+      </div>
+
+      <div class="support-grid">
+
+        <div class="support-card">
+          <h3>Prescription Refills</h3>
+          <p>No new prescriptions can be issued by this practice. For refill continuity, please contact your pharmacy directly or coordinate with your new provider once established.</p>
+        </div>
+
+        <div class="support-card">
+          <h3>Finding a New Provider</h3>
+          <p>You may search for a licensed psychiatric provider through the
+            <a href="https://www.psychologytoday.com/" target="_blank" rel="noopener">Psychology Today directory</a>,
+            your insurance provider's network directory, or your local medical board's referral line.
+          </p>
+        </div>
+
+        <div class="support-card">
+          <h3>Outstanding Billing &amp; Insurance Questions</h3>
+          <p>For billing or insurance-related questions, please contact our office at
+            <a href="mailto:admin@adhdfl.com">admin@adhdfl.com</a> or
+            <a href="tel:+15550192834">(555) 019-2834</a>.
+          </p>
+        </div>
+
+        <div class="support-card">
+          <h3>Need Help Deciding Where to Start?</h3>
+          <p>If you're unsure what to do first, reach out to our office — we're glad to point you toward the right next step.</p>
+          <a class="btn" href="mailto:admin@adhdfl.com">Contact the Office</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-logo">ADHD Treatment Center of Florida</div>
+    <p>This page will remain active for a reasonable transition period to assist patients in accessing records and locating new care.</p>
+    <p>Last updated: October 15, 2026</p>
+    <p>Copyright © 2026 ADHD Treatment Center of Florida. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
